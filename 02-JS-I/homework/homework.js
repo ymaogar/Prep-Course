@@ -68,13 +68,11 @@ function sonIguales(x, y) {
   }
 }
 
-function tienenMismaLongitud(str1, str2) { //***************************************************************************** */
+function tienenMismaLongitud(str1, str2) { 
   // Devuelve "true" si las dos strings tienen la misma longitud
   // De lo contrario, devuelve "false"
   // Tu código:
-  if(str1==str2){
-    return true;
-  }else { return false; } 
+  return str1.length === str2.length;
 }
 
 function menosQueNoventa(num) {
@@ -147,7 +145,7 @@ function redondearNumero(num) {
 function redondearHaciaArriba(num) {  //*************************************************************************** */
   // Redondea "num" hacia arriba (al próximo entero) y devuélvelo
   // Tu código:
-  return toFixed(num);
+  return Math.ceil(num);
 }
 
 function numeroRandom() {
@@ -228,6 +226,14 @@ function esVocal(letra){ /******************************************************
   //que no se puede procesar el dato mediante el mensaje "Dato incorrecto".
   // Si no es vocal, tambien debe devolver "Dato incorrecto".
   //Escribe tu código aquí
+
+  if(letra.length > 1){
+    return "Dato incorrecto"
+  }
+  if(letra === "a" || letra === "e" || letra === "i" || letra === "o" || letra === "u"){
+    return "Es vocal"
+  }
+  return "Dato incorrecto"
   
 }
 
